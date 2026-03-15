@@ -4,7 +4,6 @@ package com.javanauta.notificacao.business.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.javanauta.notificacao.business.enums.StatusNotificacaoEnum;
 import lombok.*;
-
 import java.time.LocalDateTime;
 
 @Getter
