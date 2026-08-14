@@ -1,89 +1,62 @@
+# 📧 Microsserviço de Notificação
 
-# 📩 Notificação do Agendador de Tarefas - Microsserviços em Java
+Microsserviço responsável pelo **envio de notificações por e-mail** relacionadas às tarefas agendadas no sistema.
 
-Este repositório faz parte do projeto **Agendador de Tarefas**, um sistema voltado para gerenciamento de usuários, criação de tarefas e envio de notificações automatizadas por e-mail.  
+O serviço foi desenvolvido utilizando Java e Spring Boot, com integração com serviço de e-mail e utilização de templates para construção das mensagens.
 
-O módulo **Notificação** é responsável por enviar lembretes de tarefas cadastradas no sistema, garantindo que o usuário seja avisado antes do prazo definido.
+## 🚀 Tecnologias
+
+* Java 17
+* Spring Boot
+* Spring Mail
+* Thymeleaf
+* APIs REST
+* Docker
+* Gradle
+* Git
+
+## 📌 Responsabilidades
+
+O microsserviço é responsável por:
+
+* Receber solicitações de notificação
+* Processar informações da tarefa
+* Construir o conteúdo do e-mail
+* Utilizar templates HTML
+* Enviar notificações por e-mail
+
+## ✉️ Envio de e-mails
+
+O projeto utiliza **Spring Mail** para integração com o serviço de e-mail.
+
+Os templates das mensagens são desenvolvidos utilizando **Thymeleaf**, permitindo a criação de e-mails com conteúdo dinâmico.
+
+## 🏗️ Integração
+
+O microsserviço faz parte da arquitetura do **Agendador de Tarefas** e é utilizado para realizar as notificações relacionadas às tarefas cadastradas.
 
 
-## 📌 Status do Projeto
+## ▶️ Como executar
 
-No momento, o projeto está em desenvolvimento.
-Neste momento está sendo entregue o segundo microserviço **Agendador de tarefas**.
+### Pré-requisitos
 
-**Microsserviços planejados**:
+* Java 17
+* Docker
+* Docker Compose
+* Git
 
-- ✅ Cadastro de Usuário (finalizado)
-- ✅ Agendador de Tarefas (finalizado)
-- ✅ Notificação por Email (finalizado)
-- ⏳ BFF (Back For Frontend) (em andamento)
+Clone o projeto:
 
-
-## ⚙️ Tecnologias Utilizadas
-
-- ☕ **Java 17**
-- 🌱 **Spring Boot** (Web, Data JPA, Security, Validation)
-- 📬 **Spring Mail + Thymeleaf** (Notificações por Email)
-- 📬 **Postman** (testes de requisições HTTP)
-- 🔄 **GitHub Actions** (CI/CD)
-- 🛠️ **Maven** (build e gerenciamento de dependências)
-- 🗂️ **Metodologias Ágeis** (Kanban, Git Flow com branches main, develop e feature)
-
-
-## 🚀 Funcionalidades 
-
-- Envio de notificações por e-mail para os usuários.
-- Integração com o módulo de **Cadastro de Usuários**.
-- Integração com o módulo de **Criação de Tarefas**.
-- Automação dos disparos com base na data/hora definida para cada tarefa.
-- 
-
- ## 📂 Estrutura do Projeto (parcial)
-
-```bash
-/notificacao
- ├── src/main/java          # Código principal
- │    └── com/...           # Pacotes de serviços, modelos e controladores
- ├── src/main/resources     # Configurações do projeto
- │    └── application.yml   # Configuração do banco e servidor
- └── pom.xml       
-```
-
-## ▶️ Como Rodar o Microsserviço de Usuário
-
-**1.** Clone este repositório:
 ```bash
 git clone https://github.com/LiaraFreitas/notificacao.git
 ```
 
-**2.** Acesse a pasta:
-```bash
-cd notificacao
+Execute a aplicação utilizando sua IDE ou Gradle.
 
-```
-**3.** Configure as variáveis no application.yml:
+## 🔗 Projeto completo
 
-```bash
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/agendador
-    username: seu_usuario
-    password: sua_senha
-  mail:
-    host: smtp.seuprovedor.com
-    port: 587
-    username: seu_email
-    password: sua_senha
+Este microsserviço faz parte do projeto **Agendador de Tarefas**:
 
-```
-
-**4.** Execute o projeto:
-
-```bash
-   mvn spring-boot:run
-
-```
-
-## 👨‍💻 Autor
-
-Desenvolvido por **Liara Freitas** no curso da Javanauta.
+* [Agendador de Tarefas](https://github.com/LiaraFreitas/agendador-tarefas)
+* [Usuario](https://github.com/LiaraFreitas/usuario)
+* [BFF](https://github.com/LiaraFreitas/bff-agendador-tarefas)
